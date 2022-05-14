@@ -1,7 +1,14 @@
 let keys = document.querySelectorAll('.container .key .row span'),
     keyPad = document.querySelector('.container .key'),
     display = document.querySelector('.container .display');
-var sentence;
+var submit = document.querySelector('.container .submitBtn');
+var textBox = document.querySelector('.container .textBox');
+var sentence = "";
+var userAnswer;
+var preElements = document.getElementsByTagName("pre");
+
+submit.addEventListener('click', submitForm);
+
 
 
 async function getData(){
@@ -10,7 +17,7 @@ async function getData(){
         keys.forEach(key => {
             //event listener for each key
             key.addEventListener('click', function () {
-                console.log(this.innerText);
+                // console.log(this.innerText);
                 //check if caps lock is on
                 if (this.classList.contains('caps')) {
                     this.classList.toggle('active');
@@ -31,13 +38,25 @@ async function getData(){
                 }
                 for (var i= 0; i < preElements.length; i++) {
                     var elements = preElements[i];
-                    this.sentence = elements.innerHTML;
-                    console.log(this.sentence);
+                    sentence = elements.innerHTML;
+                    console.log(sentence);
                 }
             });
         });
-        console.log(keys);
+        console.log(this.sentence);
     }
-}
+};
 
+//submit user answer
+async function submitForm() {
+    await getData();
+    console.log(sentence);
+    console.log("submit");
+    userAnswer = sentence;
+    textBox.innerHTML = userAnswer;
+    console.log(userAnswer);
+    console.log(textBox.innerHTML);
+    display.innerHTML= '';
+}
+    
 getData();
