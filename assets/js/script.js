@@ -1,9 +1,10 @@
 let keys = document.querySelectorAll('.container .key .row span'),
     keyPad = document.querySelector('.container .key'),
     display = document.querySelector('.container .display');
+var sentence;
 
 
-
+async function getData(){
     if (keys && keyPad && display) {
         let capsLockMode = false;
         keys.forEach(key => {
@@ -28,8 +29,15 @@ let keys = document.querySelectorAll('.container .key .row span'),
                         display.innerText += this.dataset.key.toLowerCase();
                     }
                 }
+                for (var i= 0; i < preElements.length; i++) {
+                    var elements = preElements[i];
+                    this.sentence = elements.innerHTML;
+                    console.log(this.sentence);
+                }
             });
         });
         console.log(keys);
-    
     }
+}
+
+getData();
