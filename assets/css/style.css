@@ -30,7 +30,7 @@ body {
     padding: 1.0417em;
     border-radius: 0.625em;
     box-shadow:
-        -0.17em -0.17em 0.4em rgb(255, 255, 255),
+        -0.17em -0.17em 0.4em #e0e0e0b0,
         0.17em 0.17em 0.4em #0002;
 }
 /* main display  */
@@ -42,7 +42,7 @@ body {
     border-radius: 0.625em;
     box-shadow:
         inset 0.08em 0.08em 0.21em #0002,
-        inset -0.08em -0.08em 0.21em #fff;
+        inset -0.08em -0.08em 0.21em #e0e0e0b0;
 }
 /* input display  */
 .container .display {
@@ -55,11 +55,11 @@ body {
     padding: 0.95em;
     overflow: hidden;
     overflow-y: auto;
-    border: 0.08em inset #fff;
+    border: 0.08em inset #e0e0e0b0;
     white-space: pre-wrap;
     box-shadow:
         inset 0.08em 0.08em 0.21em #0002,
-        inset -0.08em -0.08em 0.21em #fff;
+        inset -0.08em -0.08em 0.21em #e0e0e0b0;
 }
 
 .container .display::before {
@@ -77,4 +77,26 @@ body {
     margin-top: 0.83em;
     text-transform: lowercase;
     user-select: none;
+}
+
+.container .key .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.83em;;
+    gap: 0.83em;
+}
+
+.container .key .row span {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 8px;
+    box-shadow:
+        3px 3px 6px #0002,
+        -3px -3px 6px #e0e0e0b0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
 }
