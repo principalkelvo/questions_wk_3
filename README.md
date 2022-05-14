@@ -59,10 +59,12 @@ For full design click [image](https://www.figma.com/file/67sHSAdPxUhdGFBX6bXO8q/
 
 ## Image Attribution
 <p>Images owned by Kelvin Njoro</p>
+<p>Icons owned by Font Awesome</p>
 <p>Free for personal use with attribution</p>
 
 ## Credits
 * __[Google Fonts](https://fonts.google.com/)__ - Nunito
+* __[Font Awesome](https://fontawesome.com/)__
 
 ## License
 </p>Use it freely but please do not republish, distribute or sell</p>
