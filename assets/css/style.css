@@ -25,6 +25,7 @@ body {
 }
 /* centered container  */
 .container {
+    position: relative;
     background: #05C3FA;
     width: 30.83em;
     padding: 1.0417em;
@@ -45,10 +46,11 @@ body {
         inset -0.08em -0.08em 0.21em #e0e0e0b0;
 }
 /* input display  */
-.container .display {
+.container .display{
     position: relative;
     font-size: 18px;
     font-family: inherit;
+    /* align-items: center; */
     height: 3em;
     border-radius: 0.625em;
     padding: 0.75em;
@@ -59,6 +61,8 @@ body {
         inset 0.08em 0.08em 0.21em #0002,
         inset -0.08em -0.08em 0.21em #e0e0e0b0;
 }
+
+
 
 .container .display::before {
     content: '';
@@ -72,7 +76,42 @@ body {
     overflow: hidden;
 
 }
+.container .submitBtn {
+    position: absolute;
+    display: flex;
+    width: 2.5em;
+    height: 1.5em;
+    right: 5.9%;
+    top: 40.6%;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(107.7deg, #05C3FA -81.8%, rgba(5, 195, 250, 0.52) 198.6%);
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+    ;
+    cursor: pointer;
+    border-bottom: 0.05em solid #04b5e6;
+    border-top: 0.05em solid #cfcfcfd5;
+    border-radius: 10px;
 
+}
+.container .submitBtn i{
+    transform: rotate(10deg);
+    color: #ac0086;
+}
+
+.container .submitBtn:hover i{
+    color: #C3FA05;
+
+}
+.container .submitBtn:hover,
+.container .submitBtn:active{
+    border-right: 0.05em solid transparent;
+    border-left: 0.05em solid transparent;
+    border-color: #c8ff00;
+    color: #C3FA05;
+
+}
 .container .key {
     margin-top: 0.83em;
     text-transform: lowercase;
@@ -117,7 +156,8 @@ body {
 }
 
 .container .key .row span.active,
-.container .key .row span:hover {
+.container .key .row span:hover
+ {
     border-right: 0.05em solid transparent;
     border-left: 0.05em solid transparent;
     border-color: #c8ff00;
@@ -126,7 +166,8 @@ body {
 
 
 .container .key .row span.active,
-.container .key .row span:active {
+.container .key .row span:active ,
+.container .submitBtn:active{
     box-shadow:
         inset 3px 3px 6px #0002,
         inset -3px -3px 6px #e0e0e0b0;
