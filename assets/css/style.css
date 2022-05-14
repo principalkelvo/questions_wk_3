@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    overflow: hidden;
+}
+/* #FA05C3 
+    #05C3FA  
+    #C3FA05 
+    background: linear-gradient(107.7deg, #05C3FA -81.8%, rgba(5, 195, 250, 0.52) 198.6%); send button
+background: linear-gradient(267.16deg, rgba(5, 250, 60, 0.14) -22.01%, rgba(255, 255, 255, 0.3) 123.93%, rgba(250, 5, 195, 0.3) 123.94%); display
+background: linear-gradient(81.49deg, rgba(195, 250, 5, 0.1) -2.54%, rgba(195, 250, 5, 0.1) 77.89%, rgba(250, 5, 195, 0.5) 107.22%); small display
+border: 7px solid #00000080 text pipe
+background: #000000; angle left
+
+*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #05C3FA;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 1.0417em;
+}
+/* centered container  */
+.container {
+    background: #05C3FA;
+    width: 30.83em;
+    padding: 1.0417em;
+    border-radius: 0.625em;
+    box-shadow:
+        -0.17em -0.17em 0.4em rgb(255, 255, 255),
+        0.17em 0.17em 0.4em #0002;
+}
