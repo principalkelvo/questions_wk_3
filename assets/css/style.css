@@ -35,7 +35,7 @@ body {
 }
 /* main display  */
 .mainDisplay {
-    background: #05C3FA;
+    background-image: linear-gradient(45deg, rgba(5, 250, 60, 0.14) -22.01%, rgba(255, 255, 255, 0.3) 123.93%, rgba(250, 5, 195, 0.3) 123.94%);
     width: 100%;
     height: 8.208em;
     margin-bottom: 1em;
@@ -48,6 +48,7 @@ body {
 .container .display {
     position: relative;
     /* font-size: 18px; */
+    
     font-family: inherit;
     height: 2.3em;
     border-radius: 0.625em;
@@ -61,13 +62,19 @@ body {
         inset -0.08em -0.08em 0.21em #fff;
 }
 
-.keyboard_wrapper .display::before {
+.container .display::before {
     content: '';
     display: inline-block;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(45deg, #05C3FA52, #fa05c34d);
+    background-image: linear-gradient(45deg, rgba(5, 250, 60, 0.14) -22.01%, rgba(255, 255, 255, 0.3) 123.93%, rgba(250, 5, 195, 0.3) 123.94%);
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.container .key {
+    margin-top: 0.83em;
+    text-transform: lowercase;
+    user-select: none;
 }
