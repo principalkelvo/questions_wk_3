@@ -85,8 +85,6 @@ body {
     justify-content: center;
     margin-bottom: 0.83em;;
     gap: 0.83em; 
-    background: #05C3FA;
-    ;
 }
 
 .container .key .row span {
@@ -94,13 +92,15 @@ body {
     height: 2.08em;
     display: grid;
     color: #ac0086 ;
+    background-color: #05C3FA;
     place-content: center;
     border-radius: 0.3em;
     box-shadow:
         0.125em 0.125em 0.25em #0002,
         -0.125em -0.125em 0.25em #e0e0e0b0;
     cursor: pointer;
-    border: 0.05em solid transparent;
+    border-bottom: 0.05em solid #04b5e6;
+    border-top: 0.05em solid #cfcfcfd5;
     transition: 0.3s;
 }
 
@@ -112,3 +112,6 @@ body {
     align-items: center;
 }
 
+.container .key .row span.space {
+    width: calc(2.03em * 9.4);
+}
