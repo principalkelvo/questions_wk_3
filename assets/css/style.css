@@ -47,13 +47,11 @@ body {
 /* input display  */
 .container .display {
     position: relative;
-    /* font-size: 18px; */
-    
+    font-size: 18px;
     font-family: inherit;
-    height: 2.3em;
+    height: 3em;
     border-radius: 0.625em;
-    padding: 0.95em;
-    overflow: hidden;
+    padding: 0.75em;
     overflow-y: auto;
     border: 0.08em inset #e0e0e0b0;
     white-space: pre-wrap;
@@ -71,6 +69,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    overflow: hidden;
+
 }
 
 .container .key {
