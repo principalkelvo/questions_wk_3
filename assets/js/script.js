@@ -2,9 +2,9 @@ let keys = document.querySelectorAll('.container .key .row span'),
     keyPad = document.querySelector('.container .key'),
     display = document.querySelector('.container .display');
 var submit = document.querySelector('.container .submitBtn');
-var textBox = document.querySelector('.container .textBox');
+var textBox = document.querySelector('.container .userAnswer');
 var sentence = "";
-var userAnswer;
+var userAnswer= '';
 var preElements = document.getElementsByTagName("pre");
 
 submit.addEventListener('click', submitForm);
@@ -46,17 +46,18 @@ async function getData(){
         console.log(this.sentence);
     }
 };
+getData();
 
 //submit user answer
 async function submitForm() {
-    await getData();
-    console.log(sentence);
-    console.log("submit");
-    userAnswer = sentence;
-    textBox.innerHTML = userAnswer;
-    console.log(userAnswer);
-    console.log(textBox.innerHTML);
+    textBox.innerHTML = sentence;
+    userAnswer = textBox.innerHTML;
     display.innerHTML= '';
+    clear();
 }
-    
-getData();
+
+async function clear(){
+    display.innerText= '';
+    sentence = '';
+    console.log(userAnswer + ' ' + "hello");
+}
