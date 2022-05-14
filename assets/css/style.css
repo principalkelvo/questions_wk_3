@@ -17,7 +17,7 @@ background: #000000; angle left
 */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #05C3FA;
+    background: #37CFFB;
     display: grid;
     place-content: center;
     min-height: 100vh;
@@ -114,4 +114,24 @@ body {
 
 .container .key .row span.space {
     width: calc(2.03em * 9.4);
+}
+
+.container .key .row span.active,
+.container .key .row span:hover {
+    border-right: 0.05em solid transparent;
+    border-left: 0.05em solid transparent;
+    border-color: #c8ff00;
+    color: #C3FA05;
+}
+
+
+.container .key .row span.active,
+.container .key .row span:active {
+    box-shadow:
+        inset 3px 3px 6px #0002,
+        inset -3px -3px 6px #e0e0e0b0;
+}
+
+.container .key.uppercase {
+    text-transform: capitalize;
 }
