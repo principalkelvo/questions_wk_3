@@ -23,6 +23,45 @@ body {
     min-height: 100vh;
     padding: 1.0417em;
 }
+
+/* background image  */
+.bgImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bgImage button{
+    position: absolute;
+    bottom: 7%;
+    left: .9%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FA05C3;
+    border: none;
+    border-radius: 0.426em;
+    padding: .417em;
+    margin: 0 .9em;
+    color: #05C3FA;
+    text-shadow: #747474 0.01em 0.01em 0.01em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.bgImage button i{
+    padding-left: .4em;
+    font-size: 1em;
+    margin-right: .5em;
+}
+.bgImage button:hover{
+    background: #05C3FA;
+}
+
 /* progress bar  */
 .circleContainer {
     height: 100%;
@@ -87,14 +126,6 @@ body {
     overflow-y: scroll;
 
 }
-/* .container .column{ 
-    position: absolute;
-    width: 100%;
-    border: 1px solid red;
-    height: 26%;
-    flex-wrap: wrap;
-     padding: .8em .2em;
-} */
 
 /* div for the user results */
 .container .question{
