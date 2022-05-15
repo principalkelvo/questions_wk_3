@@ -35,13 +35,37 @@ var retryBtn= document.querySelector('.container .circleContainer button');
 var textBox = document.querySelector('.container .userAnswer');
 var progressCan = document.querySelector('.container .circleContainer');
 var quiz = document.querySelector('.container .question');
+var darkmodeBtn= document.querySelector('.darkmodeBtn');
+var darkmodeImg= document.querySelector('.darkmodeBtn img');
+var darkmode= false;
 var sentence = "";
 var userAnswer= '';
 var currentQuiz=0;
 var score=0;
 
+
+
+
 retryBtn.addEventListener('click', function(){
     window.location.reload()
+})
+
+darkmodeBtn.addEventListener('click', function(){
+    if(darkmode){
+        document.body.classList.remove('dark');
+        darkmodeImg.src= "./assets/images/Land Switch - Lightlight.svg"
+        darkmode = false;
+        console.log("darkmode off")
+    }
+
+    else{
+        document.body.classList.add('dark');
+        darkmodeImg.src= "./assets/images/Land Switch - Dark.svg"
+        darkmode = true;
+        console.log("darkmode")
+
+    }
+
 })
 
 startBtn.addEventListener('click', function(){
