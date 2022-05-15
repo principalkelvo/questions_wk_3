@@ -171,6 +171,7 @@ async function result(){
           clearInterval(progress);
         }
       }, speed);
+      textBox.classList.add('hide');
     progressCan.classList.remove('hide');
     console.log(progressEndValue);
     console.log('result');
