@@ -47,7 +47,7 @@ body {
     box-shadow:
         inset 0.08em 0.08em 0.21em #0002,
         inset -0.08em -0.08em 0.21em #e0e0e0b0;
-    overflow-y: auto;
+    overflow-y: scroll;
 
 }
 /* .container .column{ 
@@ -62,21 +62,26 @@ body {
 /* div for the user results */
 .container .question{
     /* position: absolute; */
-    width: 50%;
-    background: pink;
+    width: 49%;
+    background: #b8ea00;
     border-radius: 0.35em;
-    padding: .2em;
-    color: black;
-    margin: .5em .5em 0;
+    padding: .3em .3em;
+    color: #ac0086;
+    margin: .5em .5em 0; 
+}
+
+.container .question:first-child{
+    margin-top: 1.4em;
 }
 /* div for the user results */
 .container .userAnswer{
     /* position: absolute; */
-    width: 50%;
-    background: pink;
+    width: 49%;
+    background: #ac0086;
+    color: #b8ea00;
     border-radius: 0.35em;
-    padding: .2em;
-    margin: .4em .5em .2em;
+    padding: .3em;
+    margin: .5em .5em .5em;
     float: right;
 
 }
@@ -86,6 +91,7 @@ body {
     position: relative;
     font-size: 18px;
     font-family: inherit;
+    color: #ac0086;
     /* align-items: center; */
     height: 3em;
     border-radius: 0.625em;
@@ -98,7 +104,9 @@ body {
         inset -0.08em -0.08em 0.21em #e0e0e0b0;
 }
 
-
+.hide{
+    display: none;
+}
 
 .container .display::before {
     content: '';
