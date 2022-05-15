@@ -85,8 +85,8 @@ body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    border-radius: 8px;
-    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    border-radius: 0.4em;
+    box-shadow: 0.9em 0.9em 1.7em rgba(60, 60, 150, 0.25);
     display: grid;
     place-items: center;
     opacity: 1;
@@ -94,8 +94,8 @@ body {
   }
 .circular-progress {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 4.2em;
+    width: 4.2em;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -214,7 +214,7 @@ body {
 /* input display  */
 .container .display{
     position: relative;
-    font-size: 18px;
+    font-size: 0.75em;
     font-family: inherit;
     color: #ac0086;
     /* align-items: center; */
@@ -258,12 +258,12 @@ body {
     justify-content: center;
     
     background: linear-gradient(107.7deg, #05C3FA -81.8%, rgba(5, 195, 250, 0.52) 198.6%);
-    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: -0.17em -0.17em 0.17em rgba(255, 255, 255, 0.25), 0.17em 0.17em 0.17em rgba(0, 0, 0, 0.25);
     ;
     cursor: pointer;
     border-bottom: 0.05em solid #04b5e6;
     border-top: 0.05em solid #cfcfcfd5;
-    border-radius: 10px;
+    border-radius: 0.417em;
 
 }
 .container .submitBtn i{
@@ -318,7 +318,7 @@ body {
 .container .key .row span.backspace {
     width: calc(2.03em * 1.6);
     display: flex;
-    gap: 5px;
+    gap: 0.209em;
     align-items: center;
 }
 
@@ -340,10 +340,55 @@ body {
 .container .key .row span:active ,
 .container .submitBtn:active{
     box-shadow:
-        inset 3px 3px 6px #0002,
-        inset -3px -3px 6px #e0e0e0b0;
+        inset 0.125em 0.125em 0.25em #0002,
+        inset -0.125em -0.125em 0.25em #e0e0e0b0;
 }
 
 .container .key.uppercase {
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 769px) {
+    *{
+        font-size: 16px;
+    }
+
+}
+@media only screen and (min-width: 1440px) {
+    *{
+        font-size: 40px;
+    }
+
+}
+@media only screen and (max-width: 425px) {
+    * {
+        font-size: 13px;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    * {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    * {
+        font-size: 7px;
+    }
+
+}
+@media only screen and (max-width: 250px) {
+    * {
+        font-size: 4px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    * {
+        font-size: 10px;
+    }
+
 }
