@@ -42,6 +42,7 @@ var score=0;
 
 startBtn.addEventListener('click', function(){
     startBg.classList.add('hide');
+    quiz.classList.remove('hide')
     start();
 });
 
@@ -51,9 +52,10 @@ async function start(){
 loadQuiz()
 
 submit.addEventListener('click', submitForm);
-console.log('hello'+textBox.innerText+'hello');
-if(textBox.innerText == ''){
-    textBox.classList.add('hide');
+textBox.innerText= '';
+if(textBox.innerHTML != ''){
+    textBox.classList.remove('hide');
+    console.log('hello'+textBox.innerText+'hello')
 }
 
 async function loadQuiz(){
@@ -105,6 +107,7 @@ async function submitForm() {
     textBox.innerHTML = sentence;
     userAnswer = textBox.innerHTML.toLowerCase();
     textBox.classList.remove('hide');
+    quiz.classList.remove('animateJump')
 console.log('hello'+textBox.innerText+'hello');
     display.innerHTML= '';
     if(userAnswer == quizData[currentQuiz].correct){
@@ -119,13 +122,14 @@ console.log('hello'+textBox.innerText+'hello');
     if(currentQuiz < quizData.length){
         loadQuiz();
     textBox.classList.add('hide');
+    quiz.classList.add('animateJump')
 
     }
     else{
         console.log('game over');
         result();
     }
-    },1100)
+    },1500)
     
 
     clear();
