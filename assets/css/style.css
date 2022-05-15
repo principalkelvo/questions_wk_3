@@ -32,6 +32,11 @@ body {
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 1;
+    transition: 5s;
+    animation: fade .8s ease;
+
+
 }
 .bgImage button{
     position: absolute;
@@ -51,8 +56,16 @@ body {
     font-weight: 700;
     letter-spacing: 0.1em;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
+    animation: jump 2s ease;
 }
+
+@keyframes jump{
+    0%{
+        transform: translateX(-190%);
+    }
+}
+
 .bgImage button i{
     padding-left: .4em;
     font-size: 1em;
@@ -60,6 +73,7 @@ body {
 }
 .bgImage button:hover{
     background: #05C3FA;
+    color: #FA05C3;
 }
 
 /* progress bar  */
@@ -75,6 +89,8 @@ body {
     box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
     display: grid;
     place-items: center;
+    opacity: 1;
+    transition: .5;
   }
 .circular-progress {
     position: relative;
@@ -136,6 +152,10 @@ body {
     padding: .3em .3em;
     color: #ac0086;
     margin: .5em .5em 0; 
+
+}
+.animateJump{
+    animation: jump .5s;
 }
 
 .container .question:first-child{
@@ -151,7 +171,17 @@ body {
     padding: .3em;
     margin: .5em .5em .5em;
     float: right;
+    animation: fade .5s;
 
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 /* input display  */
@@ -173,8 +203,10 @@ body {
 }
 
 .hide{
-    display: none;
+    display : none;
+    opacity: 0;
 }
+
 
 .container .display::before {
     content: '';
