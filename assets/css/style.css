@@ -80,7 +80,7 @@ body {
 .circleContainer {
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-image: url('../images/bgDark.jpg');
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
