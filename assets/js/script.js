@@ -30,6 +30,7 @@ let keys = document.querySelectorAll('.container .key .row span'),
 var submit = document.querySelector('.container .submitBtn');
 var preElements = document.getElementsByTagName("pre");
 var textBox = document.querySelector('.container .userAnswer');
+var progressCan = document.querySelector('.container .circleContainer');
 var quiz = document.querySelector('.container .question');
 var sentence = "";
 var userAnswer= '';
@@ -111,9 +112,9 @@ console.log('hello'+textBox.innerText+'hello');
     }
     else{
         console.log('game over');
-        currentQuiz=0;
+        result();
     }
-    },3100)
+    },1100)
     
 
     clear();
@@ -123,4 +124,39 @@ async function clear(){
     display.innerText= '';
     sentence = '';
     console.log(userAnswer + ' ' + "hello");
+}
+
+
+
+let progressBar = document.querySelector(".circular-progress");
+let valueContainer = document.querySelector(".value-container");
+
+let progressValue = 0;
+let progressEndValue = 1;
+let speed = 50;
+
+
+
+
+async function result(){
+    if(score=== 0){
+        progressEndValue = 1;
+    }
+    else{
+        progressEndValue = score/quizData.length * 100;
+    }
+    let progress = setInterval(() => {
+        progressValue++;
+        valueContainer.textContent = `${progressValue}%`;
+        progressBar.style.background = `conic-gradient(
+            #4d5bf9 ${progressValue * 3.6}deg,
+            #cadcff ${progressValue * 3.6}deg
+        )`;
+        if (progressValue == progressEndValue) {
+          clearInterval(progress);
+        }
+      }, speed);
+    progressCan.classList.remove('hide');
+    console.log(progressEndValue);
+    console.log('result');
 }
