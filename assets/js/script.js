@@ -31,6 +31,7 @@ var submit = document.querySelector('.container .submitBtn');
 var preElements = document.getElementsByTagName("pre");
 var startBg= document.querySelector('.container .bgImage');
 var startBtn= document.querySelector('.container .bgImage button');
+var retryBtn= document.querySelector('.container .circleContainer button');
 var textBox = document.querySelector('.container .userAnswer');
 var progressCan = document.querySelector('.container .circleContainer');
 var quiz = document.querySelector('.container .question');
@@ -39,6 +40,9 @@ var userAnswer= '';
 var currentQuiz=0;
 var score=0;
 
+retryBtn.addEventListener('click', function(){
+    window.location.reload()
+})
 
 startBtn.addEventListener('click', function(){
     startBg.classList.add('hide');
