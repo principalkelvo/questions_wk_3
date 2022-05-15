@@ -115,6 +115,33 @@ body {
     color: #231c3d;
   }
 
+  .circleContainer button{
+    position: absolute;
+    bottom: 7%;
+    right: .9%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FA05C3;
+    border: none;
+    border-radius: 0.426em;
+    padding: .417em;
+    margin: 0 .9em;
+    color: #000000;
+    text-shadow: #747474 0.01em 0.01em 0.01em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in-out; */
+    animation: jump 2s ease;
+  }
+
+  .circleContainer button:hover{
+    background: #05C3FA;
+    color: #FA05C3;
+  }
+
 /* centered container  */
 .container {
     position: relative;
